@@ -6,7 +6,8 @@ import org.junit.runners.Suite;
 	blackBox.blackBoxGetDifferenceOfDates.class,
 	blackBox.blackBoxGetPvCost.class,
 	blackBox.blackBoxGetCPI.class,
-	blackBox.blackBoxGetEAC.class
+	blackBox.blackBoxGetEAC.class,
+	blackBox.blackBoxIsWithinProjectDates.class
 })
 
 public class BlackBoxTestSuites {

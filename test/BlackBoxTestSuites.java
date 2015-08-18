@@ -5,7 +5,8 @@ import org.junit.runners.Suite;
 @Suite.SuiteClasses({
 	blackBox.blackBoxGetDifferenceOfDates.class,
 	blackBox.blackBoxGetPvCost.class,
-	blackBox.blackBoxGetCPI.class
+	blackBox.blackBoxGetCPI.class,
+	blackBox.blackBoxGetEAC.class
 })
 
 public class BlackBoxTestSuites {

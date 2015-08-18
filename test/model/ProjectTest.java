@@ -135,6 +135,10 @@ public class ProjectTest {
 		testActivity2.addDependent(3);
 		testActivity3.addDependent(1);
 		
+		User testUser = new User(1, "test","test","test","test","test");
+		
+		testProject.addProjectPM(testUser);
+		
 		assertTrue(testProject.isValid());
 	}
 	

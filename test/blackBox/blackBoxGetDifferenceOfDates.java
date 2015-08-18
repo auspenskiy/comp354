@@ -48,10 +48,10 @@ public class blackBoxGetDifferenceOfDates {
 		
 		//<1nom, 2nom>
 		assertEquals(evaTestingClass.getDifferenceOfDatesMethod(nom,nom), 0, 0 );
-		//<1nom, 2min> //error
-		assertEquals(evaTestingClass.getDifferenceOfDatesMethod(nom,min), 1, 0 );
-		//<1nom, 2min+>	//error
-		assertEquals(evaTestingClass.getDifferenceOfDatesMethod(nom,minP), 1, 0 );
+		//<1nom, 2min> //error expected
+		evaTestingClass.getDifferenceOfDatesMethod(nom,min);
+		//<1nom, 2min+>	//error expected
+		evaTestingClass.getDifferenceOfDatesMethod(nom,minP);
 		//<1nom, 2max->
 		assertEquals(evaTestingClass.getDifferenceOfDatesMethod(nom,maxM), 9.2233711e+18, 0 );
 		//<1nom, 2max>
@@ -66,8 +66,8 @@ public class blackBoxGetDifferenceOfDates {
 		assertEquals(evaTestingClass.getDifferenceOfDatesMethod(min,maxM), 1.8446744e+19, 0 );
 		//<1min, 2max>
 		assertEquals(evaTestingClass.getDifferenceOfDatesMethod(min,max), 1.8446744e+19, 0 );
-		//<1min+, 2min>	//error
-		assertEquals(evaTestingClass.getDifferenceOfDatesMethod(minP,min), 1, 0 );
+		//<1min+, 2min>	//error expected
+		evaTestingClass.getDifferenceOfDatesMethod(minP,min);
 		//<1min+, 2min+>
 		assertEquals(evaTestingClass.getDifferenceOfDatesMethod(minP,minP), 0, 0 );
 		//<1min+, 2nom>
@@ -76,24 +76,24 @@ public class blackBoxGetDifferenceOfDates {
 		assertEquals(evaTestingClass.getDifferenceOfDatesMethod(minP,maxM), 1.8446744e+19, 0 );
 		//<1min+, 2max>
 		assertEquals(evaTestingClass.getDifferenceOfDatesMethod(minP,max), 1.8446744e+19, 0 );
-		//<1max-, 2min> //error
-		assertEquals(evaTestingClass.getDifferenceOfDatesMethod(maxM,min), 1, 0 );
-		//<1max-, 2min+> //error
-		assertEquals(evaTestingClass.getDifferenceOfDatesMethod(maxM,minP), 1, 0 );
-		//<1max-, 2nom>	//error
-		assertEquals(evaTestingClass.getDifferenceOfDatesMethod(maxM,nom), 1, 0 );
+		//<1max-, 2min> //error expected
+		evaTestingClass.getDifferenceOfDatesMethod(maxM,min);
+		//<1max-, 2min+> //error expected
+		evaTestingClass.getDifferenceOfDatesMethod(maxM,minP);
+		//<1max-, 2nom>	//error expected
+		evaTestingClass.getDifferenceOfDatesMethod(maxM,nom);
 		//<1max-, 2max->
 		assertEquals(evaTestingClass.getDifferenceOfDatesMethod(maxM,maxM), 0, 0 );
 		//<1max-, 2max>
 		assertEquals(evaTestingClass.getDifferenceOfDatesMethod(maxM,max), 1, 0 );
-		//<1max, 2min>	//error
-		assertEquals(evaTestingClass.getDifferenceOfDatesMethod(max,min), 1, 0 );
-		//<1max, 2min+>	//error
-		assertEquals(evaTestingClass.getDifferenceOfDatesMethod(max,minP), 1, 0 );
-		//<1max, 2nom>	//error
-		assertEquals(evaTestingClass.getDifferenceOfDatesMethod(max,nom), 1, 0 );
-		//<1max, 2max->	//error
-		assertEquals(evaTestingClass.getDifferenceOfDatesMethod(max,maxM), 1, 0 );
+		//<1max, 2min>	//error expected
+		evaTestingClass.getDifferenceOfDatesMethod(max,min);
+		//<1max, 2min+>	//error expected
+		evaTestingClass.getDifferenceOfDatesMethod(max,minP);
+		//<1max, 2nom>	//error expected
+		evaTestingClass.getDifferenceOfDatesMethod(max,nom);
+		//<1max, 2max->	//error expected
+		evaTestingClass.getDifferenceOfDatesMethod(max,maxM);
 		//<1max, 2max>
 		assertEquals(evaTestingClass.getDifferenceOfDatesMethod(max,max), 0, 0 );
 	}

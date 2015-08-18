@@ -3,7 +3,9 @@ import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-	blackBox.blackBoxGetDifferenceOfDates.class
+	blackBox.blackBoxGetDifferenceOfDates.class,
+	blackBox.blackBoxGetPvCost.class,
+	blackBox.blackBoxGetCPI.class
 })
 
 public class BlackBoxTestSuites {

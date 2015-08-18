@@ -46,7 +46,7 @@ import controller.ViewManager;
  * This class defined the tab panel used to generate Earned Value Analysis
  * 
  * @author Francois Stelluti
- * @modifiedBy: lukas cardot
+ * @modifiedBy: lukas cardot, Zachary Bergeron
  */
 
 @SuppressWarnings("serial")
@@ -451,10 +451,13 @@ public class EarnedValueAnalysisTab extends JPanel {
 		startModel.setSelected(true);
 		JDatePanelImpl startDateCalendarPanel = new JDatePanelImpl(startModel,p);
 		progressDatePicker = new JDatePickerImpl(startDateCalendarPanel, new DateLabelFormatter());
-		// If the start date is not null, set initial date to the project start
+		// If the start date is not null and in project constraints, set initial date to the current date, else set to dueDate if passed or startDate if before
 		// date
 		if (project.getStartDate() != null) {
-			startModel.setValue(project.getStartDate());
+			if(startModel.getValue().after(project.getDueDate()))
+				startModel.setValue(project.getDueDate());
+			else if(startModel.getValue().before(project.getStartDate()))
+				startModel.setValue(project.getStartDate());
 		} else {
 			startModel.setValue(null);
 		}
